@@ -1,0 +1,14 @@
+.editor {
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+
+  > .editor-textarea{
+    padding: 1rem;
+    flex: 1 ;
+    resize: none;
+    font-size: 1rem;
+  }
+
+}

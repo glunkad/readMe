@@ -1,10 +1,12 @@
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 1.5rem;
+  padding: 1.25rem;
+  background-color: #262626;
 
-  //> .navbar-icons{
-  //  font-size: 2.5rem
-  //}
+  > .navbar-icons{
+    font-size: 2.25rem;
+    color: white;
+  }
 
 }

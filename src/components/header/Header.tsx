@@ -1,16 +1,32 @@
 import './style.scss';
-export const Header = () => {
+
+import {MdContentCopy, MdOutlineFileDownload} from "react-icons/md";
+import {AiOutlineDelete} from "react-icons/ai";
+export const Header = ({title}) => {
+
+    const editorButtons = [
+        <MdOutlineFileDownload />,<MdContentCopy />, <AiOutlineDelete />
+    ];
+
+    const previewButtons = [
+        <MdOutlineFileDownload />,
+    ];
+
     return(
         // <div>Header</div>
         <div className="header">
             <div className="title">
-                <h2>Text</h2>
+                <h2>{title}</h2>
             </div>
             {/*these are the actions buttons which will be mapped*/}
             <div className="action-buttons">
-                {/*<img src="" alt=""/>*/}
-                {/*<img src="" alt=""/>*/}
-                {/*<img src="" alt=""/>*/}
+                {
+                    title === "Editor" ? (
+                        editorButtons.map((btn, index) => <button key={index}>{btn}</button>)
+                    ) : (
+                        previewButtons.map((btn, index) => <button key={index}>{btn}</button>)
+                    )
+                }
             </div>
         </div>
     )

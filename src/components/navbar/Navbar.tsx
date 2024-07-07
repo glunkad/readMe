@@ -6,7 +6,7 @@ export const Navbar = () => {
     return(
         // <div>Navbar</div>
         <div className="navbar">
-            <FaHashtag className="navbar-icons" />
+            <FaHashtag className="navbar-icons"/>
             <FaGithub className="navbar-icons"/>
         </div>
     )

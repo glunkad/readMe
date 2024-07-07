@@ -1,0 +1,14 @@
+.preview {
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+
+  > .preview-output {
+    padding: 1rem;
+    font-size: 1.0rem;
+    border: 1px solid #8f8f9d;
+    flex: 1;
+    overflow: auto;
+  }
+}

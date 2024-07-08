@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel",
-    "build": "parcel build"
+    "build": "parcel build --target client"
   },
   "dependencies": {
     "@types/dompurify": "^3.0.5",
@@ -26,5 +26,11 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "process": "^0.11.10"
+  },
+  "targets": {
+    "client": {
+      "source": "src/index.html",
+      "distDir": "./dist"
+    }
   }
 }

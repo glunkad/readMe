@@ -2,10 +2,10 @@ import './style.scss';
 import {Header} from "../header";
 import {useEffect, useRef, useState} from "react";
 import DOMPurify from "dompurify";
-import Prism from "prismjs";
 import "../../utils/Markdown";
 import {marked} from "../../utils/Markdown";
-
+import {MdContentCopy, MdOutlineFileDownload} from "react-icons/md";
+import {AiOutlineDelete} from "react-icons/ai";
 
 
 export const Preview = ({content}) => {
@@ -18,15 +18,32 @@ export const Preview = ({content}) => {
     useEffect(() => {
         const sanitizedHtml = DOMPurify.sanitize(getHtml(content))
         setHtml(sanitizedHtml);
-        Prism.highlightAll();
     }, [content]);
 
+
+
+    const handleDownloadClick = () => {
+        let blob = new Blob([html],{
+            type:"text/html",
+        })
+        let a = document.createElement("a")
+        a.download = "markdown.html";
+        a.href = window.URL.createObjectURL(blob);
+        a.click();
+    };
 
     return (
         // <div>Preview</div>
         <div className="preview" >
-            <Header title="PREVIEW"/>
-            <div className="preview-output" dangerouslySetInnerHTML={{ __html: html }}></div>
+            <div className="preview-navbar">
+                <div className="preview-title">
+                    <h2>PREVIEW</h2>
+                </div>
+                <div className="preview-action-buttons">
+                    <button onClick={handleDownloadClick}><MdOutlineFileDownload/></button>
+                </div>
+            </div>
+            <div className="preview-output" dangerouslySetInnerHTML={{__html: html}}></div>
         </div>
     )
 }

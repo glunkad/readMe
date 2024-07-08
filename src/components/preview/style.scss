@@ -4,11 +4,121 @@
   flex-direction: column;
   flex-basis: 50%;
 
+  > .preview-navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    > .preview-title {
+      font-size: 1.2rem;
+    }
+
+    > .preview-action-buttons {
+      display: flex;
+      flex-direction: row;
+      gap: 0.5rem;
+      font-size: 1.3rem;
+    }
+  }
+
   > .preview-output {
     padding: 1rem;
-    font-size: 1.0rem;
+    font-size: 1.4rem;
     border: 1px solid #8f8f9d;
     flex: 1;
     overflow: auto;
+
+    p {
+      margin: 0 0 1rem;
+      line-height: 1.5;
+    }
+    a {
+      color: var(--link-color);
+      &:hover {
+        filter: brightness(1.2);
+      }
+    }
+    hr {
+      border: none;
+      height: 0.187rem;
+      margin: 1.5rem 0;
+      background-color: var(--body-accent-color);
+      transition: background-color var(--color-transition);
+    }
+
+    pre {
+      transition: background-color var(--color-transition);
+      line-height: 1.45;
+      overflow: auto;
+      border-radius: 6px;
+      font-size: 0.9em;
+      padding: 1rem;
+      width: 100%;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+
+    :not(pre) > code {
+      font-size: 85%;
+      border-radius: 0.3em;
+      padding: 0.2em 0.4em;
+      margin: 0;
+      transition: color var(--color-transition);
+    }
+
+    code {
+      font-family: var(--source-code-font);
+    }
+
+    blockquote {
+      border-left: 0.312em solid var(--body-accent-color);
+      padding-left: 1rem;
+    }
+    h1 {
+      margin: 1.5rem 0 1rem;
+      line-height: 1.33;
+      padding-bottom: 0.3em;
+      border-bottom: 1px solid var(--body-accent-color);
+
+    }
+    h2 {
+      margin: 1.5rem 0 1rem;
+      line-height: 1.33;
+      padding-bottom: 0.3em;
+      border-bottom: 1px solid var(--body-accent-color);
+      transition: border-color var(--color-transition);
+    }
+    h3 {
+      margin: 1.5rem 0 1rem;
+      line-height: 1.33;
+    }
+    h4 {
+      margin: 1.5rem 0 1rem;
+      line-height: 1.33;
+    }
+    table {
+      border-collapse: collapse;
+      margin: 1.5rem 0.5rem;
+    }
+
+    th,
+    td {
+      border: 0.08rem solid var(--table-border-color);
+      transition: border-color var(--color-transition);
+      text-align: center;
+      padding: 0.5rem 1.25rem;
+    }
+
+    tr:nth-child(even) {
+      background-color: var(--alternate-table-color);
+      transition: background-color var(--color-transition);
+    }
+
+    th {
+      background-color: var(--primary-color);
+      transition: background-color var(--color-transition);
+      color: white;
+    }
   }
 }

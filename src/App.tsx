@@ -1,4 +1,5 @@
 import './App.scss';
+import './Theme.scss';
 import {Editor, Header, Navbar} from "./components";
 import {Preview} from "./components/preview/Preview";
 import useLocalStorage from "./hooks/useLocalStorage";
@@ -15,7 +16,7 @@ export const App = () => {
         <div className="wrapper">
             <Navbar />
             <div className="container">
-                <Editor value={markdownContent} onChange={handleContentChange} />
+                <Editor content={markdownContent} onChange={handleContentChange} />
                 <Preview content={markdownContent} />
             </div>
         </div>

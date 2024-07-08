@@ -1,13 +1,12 @@
 {
   "name": "readme",
   "version": "1.0.0",
-  "main": "index.js",
   "author": "glunkad",
   "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html --out-dir dist --out-file index.js"
+    "build": "parcel build src/index.html"
   },
   "dependencies": {
     "@types/dompurify": "^3.0.5",

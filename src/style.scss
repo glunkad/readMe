@@ -46,3 +46,13 @@ p, h1, h2, h3, h4, h5, h6 {
 #root, #__next {
   isolation: isolate;
 }
+
+/*
+9 . Scroll bar
+ */
+:not(pre)::-webkit-scrollbar {
+  width: 0;
+}
+:not(pre) {
+  scrollbar-width: none; /* Firefox */
+}

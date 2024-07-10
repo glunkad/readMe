@@ -12,12 +12,3 @@ export const marked = new Marked(
     })
 );
 
-
-marked.parse(`
-\`\`\`javascript
-const highlight = "code";
-\`\`\`
-`);
-// <pre><code class="hljs language-javascript">
-//   <span class="hljs-keyword">const</span> highlight = <span class="hljs-string">&quot;code&quot;</span>;
-// </code></pre>

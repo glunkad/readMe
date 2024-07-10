@@ -8,7 +8,11 @@ import {MdContentCopy, MdOutlineFileDownload} from "react-icons/md";
 import {AiOutlineDelete} from "react-icons/ai";
 
 
-export const Preview = ({content}) => {
+interface IPreviewProps {
+    content: string;
+}
+
+export const Preview: React.FC<IPreviewProps> = ({content}) => {
     const getHtml = (markdown) => {
         return marked.parse(markdown);
     };

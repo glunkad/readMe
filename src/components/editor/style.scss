@@ -19,6 +19,24 @@
       flex-direction: row;
       gap: 0.5rem;
       font-size: 1.3rem;
+
+      > button {
+        border-radius: 0.3rem;
+        font-size: 1.5rem;
+        color: var(--nav-item-color);
+        background-color: var(--primary-color);
+        border: none;
+        transition: filter 200ms ease;
+        margin: 0 0.35rem;
+        padding: 0.4rem 0.4rem 0.15rem;
+        &:hover {
+          filter: brightness(1.1);
+        }
+        &:focus {
+          outline: none;
+          filter: brightness(0.9);
+        }
+      }
     }
   }
 
@@ -26,7 +44,7 @@
     padding: 1rem;
     flex: 1 ;
     resize: none;
-    font-size: 1.4rem;
+    font-size: 1.0rem;
     color: var(--primary-text-color);
     background-color: var(--body-color);
     transition: background-color var(--color-transition);

@@ -2,10 +2,27 @@ import './style.scss';
 import {Header} from "../header";
 import {MdContentCopy, MdOutlineFileDownload} from "react-icons/md";
 import {AiOutlineDelete} from "react-icons/ai";
+import {useEffect} from "react";
+import {placeholder} from "../../utils/Placeholder";
 
-export const Editor = ({ content, onChange }) => {
+interface IEditorProps {
+    content: string;
+    onChange: () => (newContent) => void
+}
+
+export const Editor: React.FC<IEditorProps> = ({ content, onChange }) => {
+
+    useEffect(() => {
+        if(content ===""){
+            localStorage.setItem("markdown",placeholder);
+        }
+        else {
+            localStorage.setItem("markdown",content);
+        }
+    }, [content]);
 
     const handleChange = (event) => {
+        event.preventDefault();
         onChange(event.target.value);
     }
 
@@ -28,6 +45,9 @@ export const Editor = ({ content, onChange }) => {
     };
 
 
+    const handleResetClick = () => {
+        onChange("")
+    };
     return(
         // <div>Editor</div>
         <div className="editor">
@@ -38,7 +58,7 @@ export const Editor = ({ content, onChange }) => {
                 <div className="editor-action-buttons">
                     <button onClick={handleDownloadClick}><MdOutlineFileDownload/></button>
                     <button onClick={handleCopyToClipboard}><MdContentCopy/></button>
-                    <button><AiOutlineDelete/></button>
+                    <button onClick={handleResetClick}><AiOutlineDelete/></button>
                 </div>
             </div>
             <textarea

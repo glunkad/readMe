@@ -1,15 +1,17 @@
 import './App.scss';
 import './Theme.scss';
-import {Editor, Header, Navbar} from "./components";
-import {Preview} from "./components/preview/Preview";
-import useLocalStorage from "./hooks/useLocalStorage";
+import {Editor, Navbar, Preview} from "./components";
+import {placeholder} from "./utils/Placeholder";
+import { useState} from "react";
 
 export const App = () => {
 
-    const [markdownContent, setMarkdownContent] = useLocalStorage('markdownContent', '');
+    let markdown = localStorage.getItem("markdown") || placeholder;
+    const [markdownContent, setMarkdownContent] = useState(markdown)
 
     const handleContentChange = (newContent) => {
         setMarkdownContent(newContent);
+        console.log(newContent)
     };
 
     return (

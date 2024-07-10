@@ -2,7 +2,7 @@
 
 export const placeholder=`# Hello 👋
 
-markItDown is a markdown editor ✍ designed by [Gunjan Lunkad](https://github.com/glunkad)
+readMe is a markdown editor ✍ designed by [Gunjan Lunkad](https://github.com/glunkad)
 
 ## 🤷‍♂️ What can you write here
 

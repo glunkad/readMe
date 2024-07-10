@@ -11,10 +11,8 @@
 * Live Preview
 * Copy to clipboard
 * Save as HTML
-* Multiple theme support
-* Works offline (PWA)
 * One-tap clear button
-* Adjustable window size
+
 
 <br/>
 
@@ -36,7 +34,7 @@ Clone the repo and install the dependencies.
 
 ```bash
 git clone https://github.com/glunkad/readMe.git
-cd Markdown-Editor
+cd readMe
 ```
 
 ```bash

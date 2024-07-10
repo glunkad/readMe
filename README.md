@@ -1,6 +1,6 @@
 
 <div align="center">
-![readMe](https://github.com/glunkad/readMe/assets/67200542/7490c05d-70d3-4933-a39a-f825626e8fa1)
+<img src="https://github.com/glunkad/readMe/assets/67200542/7490c05d-70d3-4933-a39a-f825626e8fa1">
 <h1>✍🏻 readMe</h1>
 <p>React Webapp to edit and preview markdown<p/><br/>
 </div>

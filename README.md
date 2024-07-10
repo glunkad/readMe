@@ -1,6 +1,6 @@
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/aromalanil/markItDown/master/art/github_preview.webp" />
+![readMe](https://github.com/glunkad/readMe/assets/67200542/7490c05d-70d3-4933-a39a-f825626e8fa1)
 <h1>✍🏻 readMe</h1>
 <p>React Webapp to edit and preview markdown<p/><br/>
 </div>

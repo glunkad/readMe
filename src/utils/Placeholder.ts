@@ -40,6 +40,6 @@ readMe is a markdown editor ✍ designed by [Gunjan Lunkad](https://github.com/g
 
 *  React.js
 *  SCSS
-*  Javascript
+*  TypeScript
 
 `;

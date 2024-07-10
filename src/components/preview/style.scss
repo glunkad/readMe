@@ -46,7 +46,6 @@
       background-color: var(--body-accent-color);
       transition: background-color var(--color-transition);
     }
-
     pre {
       transition: background-color var(--color-transition);
       line-height: 1.45;
@@ -58,29 +57,34 @@
       margin-top: 0;
       margin-bottom: 1rem;
     }
-
     :not(pre) > code {
       font-size: 85%;
       border-radius: 0.3em;
       padding: 0.2em 0.4em;
       margin: 0;
-      transition: color var(--color-transition);
+      transition: background-color var(--color-transition);
     }
-
     code {
       font-family: var(--source-code-font);
     }
 
+    li + li {
+      margin-top: 0.25em;
+    }
     blockquote {
       border-left: 0.312em solid var(--body-accent-color);
+      transition: border-color var(--color-transition);
       padding-left: 1rem;
+    }
+    img {
+      max-width: 100%;
     }
     h1 {
       margin: 1.5rem 0 1rem;
       line-height: 1.33;
       padding-bottom: 0.3em;
       border-bottom: 1px solid var(--body-accent-color);
-
+      transition: border-color var(--color-transition);
     }
     h2 {
       margin: 1.5rem 0 1rem;
@@ -119,6 +123,9 @@
       background-color: var(--primary-color);
       transition: background-color var(--color-transition);
       color: white;
+    }
+    summary:focus {
+      outline: none;
     }
   }
 }

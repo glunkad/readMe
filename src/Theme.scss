@@ -1,9 +1,22 @@
-:root {
-  --link-color: #339989;
-  --body-accent-color: #e1e4e8;
-  --color-transition: 0.3s ease-out;
-  --source-code-font: 'Source Code Pro', monospace;
-  --table-border-color: #ddd;
-  --alternate-table-color: #eaecef;
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
   --primary-color: #339989;
+  --accent-color: #7de2d1;
+  --nav-section-text-color: #2b2c28;
+  --body-color: #fff;
+  --nav-item-color: #fff;
+  --body-accent-color: #e1e4e8;
+  --alternate-table-color: #eaecef;
+  --primary-text-color: #24292e;
+  --link-color: var(--primary-color);
+  --table-border-color: #ddd;
+  --source-code-font: 'Source Code Pro', monospace;
+  --open-sans-font: 'Open Sans', sans-serif;
+  --color-transition: 0.3s ease-out;
+  background-color: var(--body-color);
+  transition: background-color var(--color-transition);
+  color: var(--primary-text-color);
+  font-family: var(--open-sans-font);
 }

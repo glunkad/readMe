@@ -2,7 +2,9 @@
   display: flex;
   justify-content: space-between;
   padding: 1.25rem;
-  background-color: #262626;
+  background-color: var(--primary-color);
+  transition: background-color var(--color-transition);
+  color: var(--nav-item-color);
 
   > .navbar-icons{
     font-size: 2.25rem;

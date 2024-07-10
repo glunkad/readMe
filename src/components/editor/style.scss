@@ -27,6 +27,10 @@
     flex: 1 ;
     resize: none;
     font-size: 1.4rem;
+    color: var(--primary-text-color);
+    background-color: var(--body-color);
+    transition: background-color var(--color-transition);
+    font-family: var(--source-code-font);
   }
 
 }

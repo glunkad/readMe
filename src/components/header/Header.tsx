@@ -1,8 +1,9 @@
 import './style.scss';
 
-import {MdContentCopy, MdOutlineFileDownload} from "react-icons/md";
-import {AiOutlineDelete} from "react-icons/ai";
-export const Header = ({title}) => {
+interface IHeader {
+    title: string
+}
+export const Header: React.FC<IHeader> = ({title}) => {
 
     return(
         // <div>Header</div>
